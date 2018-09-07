@@ -5,7 +5,7 @@
 ```bash
 gprbuild -p
 ```
-## Uruchamianie 
+## Uruchamianie przykładów
 
 ### Obliczanie epsilon maszynowego
 
