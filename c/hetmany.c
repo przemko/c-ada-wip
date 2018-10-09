@@ -34,6 +34,24 @@ bool hetmany(int rozmiar, int permutacja[rozmiar], int kolumna)
   return false;
 }
 
+void plansza(int rozmiar, int permutacja[rozmiar])
+{
+  for(int i = 0; i < rozmiar; i++)
+  {
+    for(int j = 0; j < rozmiar; j++)
+      printf("+--");
+    printf("+\n");
+    for(int j = 0; j < rozmiar; j++)
+      if(permutacja[i] == j)
+        printf("|##");
+      else
+        printf("|  ");
+    printf("|\n");
+  }
+  for(int j = 0; j < rozmiar; j++)
+    printf("+--");
+  printf("+\n");
+}
 
 int main(void)
 {
@@ -58,11 +76,7 @@ int main(void)
     }
     int permutacja[n];
     if(hetmany(n, permutacja, 0))
-    {
-      for(int i = 0; i < n; i++)
-        printf("%4d", permutacja[i]);
-      printf("\n");
-    }
+      plansza(n, permutacja);
     else
       printf("Brak rozwiązania!\n");
   }
