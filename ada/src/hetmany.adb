@@ -13,12 +13,8 @@ procedure Hetmany is
       if Kolumna > Permutacja'Last then
          return True;
       end if;
-      for J in 0 .. Permutacja'Length - 1 loop
+      for Wiersz in Permutacja'Range loop
          declare
-            Wiersz : Integer :=
-              1 +
-                (Permutacja'Last + Permutacja'First) / 2 +
-              ((-1) ** J) * (J + 1) / 2;
             I : Integer := Permutacja'First;
          begin
             while I < Kolumna loop
@@ -76,7 +72,7 @@ begin
          if Ustaw(P, P'First) then
             Plansza(P);
          else
-            Put_Line ("Brak rozwiazania/");
+            Put_Line ("Brak rozwiazania");
          end if;
       end;
    end loop;
