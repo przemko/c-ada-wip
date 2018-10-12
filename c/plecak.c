@@ -30,12 +30,12 @@ int plecak(int n, int rozmiar[n], int wartosc[n],
 int main(void)
 {
   int n;
-  printf("  Ile przedmiotów (max = %d): ", max_n);
+  printf("Ile rodzajów przedmiotów (max = %d): ", max_n);
   scanf("%d", &n);
   assert(n > 0);
   assert(n <= max_n);
   int pojemnosc;
-  printf("Pojemność plecaka (max = %d): ", max_pojemnosc);
+  printf("   Pojemność plecaka (max = %d): ", max_pojemnosc);
   scanf("%d", &pojemnosc);
   assert(pojemnosc > 0);
   assert(pojemnosc <= max_pojemnosc);
@@ -43,9 +43,9 @@ int main(void)
   int wartosc[n];
   for(int i = 0; i < n; i++)
   {
-    printf("  rozmiar przedmiotu [%d]: ", i);
+    printf("  rozmiar przedmiotu rodzaju [%d]: ", i);
     scanf("%d", &rozmiar[i]);
-    printf("  wartość przedmiotu [%d]: ", i);
+    printf("  wartość przedmiotu rodzaju [%d]: ", i);
     scanf("%d", &wartosc[i]);
   } 
   printf("Maksymalna wartość zabranych przedmiotów = %d\n", 
