@@ -33,13 +33,11 @@ procedure ScalSort is
                I := I + 1;
             else
                Robocza(K) := Tab(J);
-               I := I + 1;
+               J := J + 1;
             end if;
             K := K + 1;
          end loop;
-         for I in Pierwszy .. Ostatni loop
-            Tab(I) := Robocza(I);
-         end loop;
+	 Tab (Pierwszy .. Ostatni) := Robocza (Pierwszy .. Ostatni);
       end Scal;
 
       procedure RekSort (Pierwszy, Ostatni : Integer) is
